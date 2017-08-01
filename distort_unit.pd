@@ -1,0 +1,52 @@
+#N canvas 629 105 561 572 10;
+#X obj 42 263 inlet~;
+#X obj 88 522 outlet~;
+#X obj 103 335 *~;
+#X obj 115 384 expr~ tanh(exp($v1));
+#X obj 138 474 hip~;
+#X obj 66 307 *~;
+#X obj 348 246 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 378 245 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 264 213 fader_unit;
+#X obj 234 112 inlet;
+#X obj 402 271 tgl 15 0 empty empty bypass 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 12 376 *~;
+#X obj 398 419 moses 1;
+#X obj 373 460 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 436 460 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 333 486 1;
+#X msg 361 486 0;
+#X msg 430 485 0;
+#X msg 460 486 1;
+#X obj 190 526 outlet;
+#X connect 0 0 5 0;
+#X connect 0 0 11 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 1;
+#X connect 7 0 4 1;
+#X connect 8 0 6 0;
+#X connect 8 1 7 0;
+#X connect 8 2 10 0;
+#X connect 8 5 19 0;
+#X connect 9 0 8 0;
+#X connect 10 0 12 0;
+#X connect 11 0 1 0;
+#X connect 12 0 13 0;
+#X connect 12 1 14 0;
+#X connect 13 0 15 0;
+#X connect 13 0 16 0;
+#X connect 14 0 17 0;
+#X connect 14 0 18 0;
+#X connect 15 0 5 1;
+#X connect 16 0 11 1;
+#X connect 17 0 5 1;
+#X connect 18 0 11 1;
+#X coords 0 -1 1 1 210 210 1 250 200;

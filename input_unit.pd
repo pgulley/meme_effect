@@ -1,0 +1,17 @@
+#N canvas 435 99 681 473 10;
+#X obj 244 225 fader_unit;
+#X obj 76 434 outlet~;
+#X obj 162 435 outlet~;
+#X obj 29 180 inlet;
+#X obj 24 237 adc1_unit;
+#X obj 115 238 adc2_unit;
+#X obj 318 436 outlet;
+#X connect 0 0 4 0;
+#X connect 0 1 5 0;
+#X connect 0 2 4 1;
+#X connect 0 3 5 1;
+#X connect 0 5 6 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X coords 0 -1 1 1 300 200 1 20 220;

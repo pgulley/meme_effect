@@ -1,0 +1,10 @@
+#N canvas 113 23 994 755 10;
+#X obj 10 5 root;
+#X obj 10 90 input_unit;
+#X obj 9 293 bob_unit;
+#X obj 10 511 output_unit;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 2 2 1;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;

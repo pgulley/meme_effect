@@ -1,0 +1,42 @@
+#N canvas 480 31 765 467 10;
+#X obj 27 33 adc~ 1;
+#X obj 25 107 tb_compressor~;
+#X obj 110 188 tb_compressorUI;
+#X msg 125 74 gain \$1;
+#X obj 480 46 inlet;
+#X obj 29 372 outlet~;
+#X obj 557 142 vsl 15 150 -10 20 0 0 empty empty empty 0 -9 0 10 -204786
+-1 -1 0 1;
+#X obj 481 71 / 127;
+#X obj 481 117 - 10;
+#X obj 481 94 * 30;
+#X obj 579 142 vu 15 120 empty empty -1 -8 0 10 -191407 -1 1 0;
+#X obj 55 153 env~ 128;
+#X obj 55 176 - 100;
+#X obj 29 340 *~;
+#X obj 85 344 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 578 279 tgl 15 0 empty empty Mute 17 7 0 10 -261234 -258113
+-86277 0 1;
+#X obj 578 325 == 0;
+#X text 549 234 ----;
+#X obj 571 44 inlet;
+#X connect 0 0 1 0;
+#X connect 1 0 11 0;
+#X connect 1 0 13 0;
+#X connect 1 1 2 0;
+#X connect 2 0 1 1;
+#X connect 3 0 1 1;
+#X connect 4 0 7 0;
+#X connect 6 0 3 0;
+#X connect 7 0 9 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 0;
+#X connect 11 0 12 0;
+#X connect 12 0 10 0;
+#X connect 13 0 5 0;
+#X connect 14 0 13 1;
+#X connect 15 0 16 0;
+#X connect 16 0 14 0;
+#X connect 18 0 15 0;
+#X coords 0 -1 1 1 85 180 1 550 120;
